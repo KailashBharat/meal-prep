@@ -4,8 +4,8 @@ const axios = require("axios");
 
 const router = express.Router();
 
-const generateApiUrl = require("../utils.js/apiUrl");
-const ErrorResponse = require("../utils.js/ErrorResponse");
+const generateApiUrl = require("../utils/apiUrl");
+const ErrorResponse = require("../utils/ErrorResponse");
 
 router.post("/food/search-recipies/", async (req, res, next) => {
   const { description } = req.body;
@@ -97,5 +97,7 @@ router.get("/recipies-by-id", async (req, res, next)=>{
         return next(new ErrorResponse("Something went wrong when fetching recipies by id"))
     }
 })
+
+// Workouts api https://wger.de/en/software/api
 
 module.exports = router;

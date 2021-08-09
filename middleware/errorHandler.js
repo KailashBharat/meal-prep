@@ -1,4 +1,4 @@
-const ErrorResponse = require("../utils.js/ErrorResponse")
+const ErrorResponse = require("../utils/ErrorResponse")
 
 module.exports = (err, req, res, next) =>{
     const {name, message, statusCode} = err
